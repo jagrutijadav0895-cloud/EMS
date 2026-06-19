@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hive EMS | Employee Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Hive EMS home">
+        <span class="brand-mark">⬢</span>
+        <span><strong>Hive</strong> EMS</span>
+      </a>
+      <nav>
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#employees">Employees</a>
+        <a href="#projects">Projects</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#payroll">Payroll</a>
+        <a href="#reports">Reports</a>
+      </nav>
+      <div class="sidebar-card">
+        <p>Team health</p>
+        <strong>94%</strong>
+        <span>Engagement score</span>
+      </div>
+    </aside>
+
+    <main id="top" class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Employee Management System</p>
+          <h1>Run your workforce like a connected hive.</h1>
+        </div>
+        <button class="primary-action">+ Add Employee</button>
+      </header>
+
+      <section id="dashboard" class="hero">
+        <div class="hero-copy">
+          <span class="pill">Hive-inspired workplace command center</span>
+          <h2>Organize people, projects, attendance, payroll, and performance in one bright dashboard.</h2>
+          <p>
+            A modern EMS concept with honeycomb visuals, quick HR actions, searchable employee records,
+            live workforce metrics, project boards, and operational cards for busy teams.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#employees">View employees</a>
+            <a class="button ghost" href="#projects">Open project hub</a>
+          </div>
+        </div>
+        <div class="hive-panel" aria-label="Workforce summary">
+          <div class="hex hex-large"><strong>248</strong><span>Employees</span></div>
+          <div class="hex"><strong>97%</strong><span>Present</span></div>
+          <div class="hex"><strong>18</strong><span>Open roles</span></div>
+          <div class="hex"><strong>4.8</strong><span>Rating</span></div>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Key metrics">
+        <article><span>Total Employees</span><strong>248</strong><small>+12 this month</small></article>
+        <article><span>On Leave</span><strong>14</strong><small>6 pending approvals</small></article>
+        <article><span>Payroll Ready</span><strong>92%</strong><small>Next run: Friday</small></article>
+        <article><span>Active Projects</span><strong>32</strong><small>8 due this week</small></article>
+      </section>
+
+      <section id="employees" class="panel two-column">
+        <div>
+          <p class="eyebrow">Employee directory</p>
+          <h2>Find every worker bee fast.</h2>
+          <p class="muted">Filter employees by department, role, attendance, or lifecycle status with a clean Hive-style directory.</p>
+        </div>
+        <div class="search-box">
+          <input id="employeeSearch" type="search" placeholder="Search employee or department" aria-label="Search employees" />
+        </div>
+        <div class="table-wrap full-width">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Department</th><th>Status</th><th>Performance</th></tr>
+            </thead>
+            <tbody id="employeeTable">
+              <tr><td>Ava Johnson</td><td>Product</td><td><span class="status online">Active</span></td><td>4.9</td></tr>
+              <tr><td>Noah Smith</td><td>Engineering</td><td><span class="status online">Active</span></td><td>4.7</td></tr>
+              <tr><td>Mia Chen</td><td>People Ops</td><td><span class="status away">On Leave</span></td><td>4.8</td></tr>
+              <tr><td>Leo Patel</td><td>Finance</td><td><span class="status online">Active</span></td><td>4.5</td></tr>
+              <tr><td>Sofia Garcia</td><td>Sales</td><td><span class="status review">Review</span></td><td>4.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="projects" class="panel projects-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Project management</p>
+            <h2>Plan work like Hive, without leaving EMS.</h2>
+            <p class="muted">Bring HR capacity and delivery work together with action cards, team owners, sprint timelines, priorities, and workload visibility.</p>
+          </div>
+          <button class="primary-action compact">+ New Action Card</button>
+        </div>
+
+        <div class="project-tools" aria-label="Project management highlights">
+          <article>
+            <span>📌</span>
+            <strong>Action cards</strong>
+            <small>Assign owners, due dates, labels, and checklists.</small>
+          </article>
+          <article>
+            <span>🧭</span>
+            <strong>Multiple views</strong>
+            <small>Switch between Kanban, calendar, workload, and timeline views.</small>
+          </article>
+          <article>
+            <span>💬</span>
+            <strong>Team collaboration</strong>
+            <small>Keep comments, files, approvals, and updates beside each task.</small>
+          </article>
+        </div>
+
+        <div class="project-board" aria-label="Project task board">
+          <div class="board-column">
+            <h3>To do <span>4</span></h3>
+            <article class="task-card high">
+              <small>Recruiting</small>
+              <strong>Design onboarding checklist</strong>
+              <p>Owner: Mia • Due Jun 24</p>
+            </article>
+            <article class="task-card">
+              <small>People Ops</small>
+              <strong>Draft Q3 hiring plan</strong>
+              <p>Owner: Ava • Due Jun 28</p>
+            </article>
+          </div>
+          <div class="board-column">
+            <h3>In progress <span>6</span></h3>
+            <article class="task-card medium">
+              <small>Payroll</small>
+              <strong>Automate timesheet approval flow</strong>
+              <p>Owner: Leo • 62% complete</p>
+            </article>
+            <article class="task-card">
+              <small>Engineering</small>
+              <strong>Ship employee profile updates</strong>
+              <p>Owner: Noah • Due Friday</p>
+            </article>
+          </div>
+          <div class="board-column">
+            <h3>Done <span>12</span></h3>
+            <article class="task-card done">
+              <small>Analytics</small>
+              <strong>Publish retention dashboard</strong>
+              <p>Owner: Sofia • Completed</p>
+            </article>
+            <article class="task-card done">
+              <small>Compliance</small>
+              <strong>Update leave policy docs</strong>
+              <p>Owner: Mia • Completed</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <div>
+            <h3>Project timeline</h3>
+            <p class="muted">A Hive-like timeline keeps workforce initiatives, HR campaigns, and product work aligned by week.</p>
+          </div>
+          <div class="timeline-bars" aria-label="Timeline preview">
+            <span style="--start: 1; --span: 4;">Onboarding revamp</span>
+            <span style="--start: 3; --span: 5;">Payroll automation</span>
+            <span style="--start: 6; --span: 3;">Engagement survey</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-grid">
+        <article id="attendance" class="feature-card">
+          <span class="icon">⏱</span>
+          <h3>Attendance tracking</h3>
+          <p>Clock-ins, shifts, late alerts, overtime, and leave approvals organized into daily honeycomb tiles.</p>
+        </article>
+        <article id="payroll" class="feature-card">
+          <span class="icon">💳</span>
+          <h3>Payroll readiness</h3>
+          <p>Validate timesheets, bonuses, deductions, tax status, and approvals before every payroll run.</p>
+        </article>
+        <article id="reports" class="feature-card">
+          <span class="icon">📊</span>
+          <h3>People analytics</h3>
+          <p>Track headcount, retention, performance, hiring funnels, and team engagement from a single view.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
